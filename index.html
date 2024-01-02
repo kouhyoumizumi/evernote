@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evernote</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <video autoplay loop muted plays-inline class="bg-clip">
+            <source src="videos/bg.mp4" type="video/mp4">
+        </video>
+        <nav>
+            <a href="index.html" class="link">
+                <h1>≡ TO-DO LIST</h1>
+            </a>
+            <a href="members.html" class="link">
+                <h2>GROUP MEMBERS</h2>
+            </a>
+        </nav>
+        <div class="todo-app">
+            <center><img src="images/icon.png"></center>
+            <center>
+                <h2> To-Do List - Group 4 </h2>
+            </center>
+            <div class="row">
+                <input type="text" id="input-box" placeholder="Add your text">
+                <button onclick="addTask()">Add</button>
+            </div>
+            <ul id="list-container"></ul>
+
+            <center><button id="btnPlayBG" onclick="playMusic()">Play Background Music</button></center>
+        </div>
+    </div>
+    <!-- @Note(Aron): Credit - https://pixabay.com/sound-effects/ -->
+    <audio src="sounds/complete_cut.mp3" hidden="true" id="fx-complete"></audio>
+    <audio src="sounds/fail.mp3" hidden="true" id="fx-fail"></audio>
+
+    <!--@Note(Aron): Credit: https://www.youtube.com/watch?v=7Q3BGAPAGQY-->
+    <audio hidden loop id="bg-music">
+        <source src="sounds/bg.mp3" type="audio/mp3">
+    </audio>
+    <script src="script.js"></script>
+</body>
+
+</html>
